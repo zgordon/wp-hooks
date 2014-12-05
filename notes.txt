@@ -1,0 +1,113 @@
+notes.txt
+
+## Why Hooks?
+
+	- Allow us to customize themes with just a little bit of code
+	- Can customize core without having to edit core files
+	- Add ability for other people to extend your plugins or themes
+	- Reasons for me as teacher at Treehouse, looking for more advanced content
+		Get into a lot of helpful functions, but also try to explain some bigger picture concepts
+
+## Definition of Terms
+
+	Hook
+
+	Hooks let you add your own custom code into WordPress.
+
+	Filter
+
+	Filters allow you to intercept and modify data as it is processed
+	- Returns something, you modify it, you return it back
+
+	Action
+
+	Actions allow you to add extra functionality at a specific point in the processing of the page
+	- Add something to runtime
+	- You do something rather than return something
+
+
+
+## Native Hooks
+
+	### $wp_filter 
+			- Associative array of all ~200+ actions and filters
+			- Great to explore to see what's out there
+			- A number of ways exist to explore it
+			- var_export()
+			- Custom code snippets - debug-hooks.php from Rarst
+			- Query Monitor plugin
+			Example
+			 	- wp_filter.php			 				 	
+			 	- Hook, priority, functions hooked in
+			 	- Drill down into hook
+
+	### Looking Further Into Hooks
+			- Codex
+			- Source
+
+			Example
+				- wp_filter.php	
+				- Look for wp_title
+				- Google search "wp_title"
+					Function reference v. Filter reference
+				- Search code base
+					add_filter( 'wp_title
+						Can see where people are adding to it
+					apply_filters( 'wp_title
+						Show where it's being applied
+
+	### Removing Native Hooks
+			Example
+				- remove_filter
+				- add_filter
+	### Conditional Helpers
+			- has_fitler
+			- has_action
+			- current_filter
+			Example
+			- has_filter.php (has action would be similar)
+			- current_filter.php
+
+
+
+## Custom Hooks
+
+	### Hooking Your Own Functions into Native Hooks
+		- Find the hook you want
+		- Get number of parameters accepted
+		- Write your function
+		- add_filter
+
+		Example
+			- wp_title.php
+			- publish_post.php
+
+	### Creating Your Own Hooks
+		- Write your function
+		- Call add_filter
+		- apply_filters - use in your code, will apply everything hooked to it		
+		- do_action - add to code where you want it to run
+
+		Example
+			- apply_filters.php
+			- do_action.php
+
+## Common Hooks	
+
+		Examples
+			- register_menu.php
+			- wp_enqueue_scripts.php
+			- widgets_init.php
+
+## Popular Hooks
+
+
+	- body_class_example.php
+	- wp_mail_from_example.php
+	- short_code_for_widgets.php
+	- remove_menus.php
+	- admin_menu_page.php
+	- manage_posts_columns_example.php
+	- remove_bulk_actions.php
+	- excerpt_length.php
+
