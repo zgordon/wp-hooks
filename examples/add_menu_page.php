@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 
 add_action('admin_menu' , 'my_plugin_page');
 
@@ -7,6 +8,7 @@ function my_plugin_page() {
 	add_options_page('My Page', 'My Page', 'manage_options', 'my_plugin', 'my_plugin_page');
 
 }
+
 
 add_action( 'admin_menu', 'register_my_custom_menu_page' );
 
