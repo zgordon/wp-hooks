@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <title>WordPress Hooks Explained - WordCamp Orlando 2014 - Zac Gordon</title>
+
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" href="../deck.js/core/deck.core.css">
+
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" media="screen" href="../deck.js/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" media="screen" href="../deck.js/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="../deck.js/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="../deck.js/extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="../deck.js/extensions/scale/deck.scale.css">
+
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="../deck.js/themes/style/swiss.css">
+    <link rel="stylesheet" media="screen" href="themes/style/treehouse.css">
+
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="../deck.js/themes/transition/horizontal-slide.css">
+
+    <!-- Basic black and white print styles -->
+    <link rel="stylesheet" media="print" href="../deck.js/core/print.css">
+
+    <!-- Required Modernizr file -->
+    <script src="../deck.js/modernizr.custom.js"></script>
+</head>
+<body>
+
+
+
+    <div class="deck-container">
+
+        <!-- Begin slides. Just make elements with a class of slide. -->
+
+        <section id="welcome" class="slide">
+            <h1>WordPress Hooks Explained</h1>
+        </section>
+
+
+        <section id="overview" class="slide">
+            <h2>Overview</h2>
+            <ul>
+                <li>Definitions: hooks, filters, actions</li>
+                <li>$wp_filters</li>
+                <li>Looking up a Hook</li>
+                <li>Helper Functions: has_filter, has_action, current_filter</li>
+                <li>Removing Hooks</li>
+                <li>Adding Custom Code to a Native Hook</li>
+                <li>Create Your Own Hooks</li>
+            </ul>
+        </section>
+
+        <section id="definitions" class="slide">
+            <h2>Definitions</h2>
+            <ul class="definitions">
+                <li class="slide">
+                    <strong>Hooks</strong> - General term referring
+                    to places where you add code to WordPress core, a theme or a plugin.
+                </li>
+                <li class="slide">
+                    <strong>Filters</strong> - Let you to
+                    get and modify data.
+                </li>
+                <li class="slide">
+                    <strong>Actions</strong> - Allow you to
+                    run code at a specific point in the WordPress runtime.
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="wp_filters" class="slide">
+            <h2>All the Hooks in WordPress</h2>
+            <ul>
+                <li class="slide">
+                    <strong>$wp_filters</strong> - Associative array of all actions and filters
+                </li>
+                <li class="slide">
+
+                </li>
+                <li class="slide">
+                    <strong>Actions</strong> - Allow you to
+                    run code at a specific point in the WordPress runtime.
+                </li>
+            </ul>
+        </section>
+
+        <!-- End slides. -->
+
+        <!-- Begin extension snippets. Add or remove as needed. -->
+
+        <!-- deck.navigation snippet -->
+        <div aria-role="navigation">
+            <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+            <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+        </div>
+
+        <!-- deck.status snippet -->
+        <p class="deck-status" aria-role="status">
+            <span class="deck-status-current"></span>
+            /
+            <span class="deck-status-total"></span>
+        </p>
+
+        <!-- deck.goto snippet -->
+        <form action="." method="get" class="goto-form">
+            <label for="goto-slide">Go to slide:</label>
+            <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+            <datalist id="goto-datalist"></datalist>
+            <input type="submit" value="Go">
+        </form>
+
+        <!-- End extension snippets. -->
+        <div id="banner">
+            <p>Common and Helpful WordPress Hooks Explained</p> 
+            <p>WordCamp Orlando 2014 - Zac Gordon <a href="https://twitter.com/zgordon">@zgordon</a></p>
+        </div>
+    </div>
+
+
+<!-- Required JS files. -->
+<script src="../deck.js/jquery.min.js"></script>
+<script src="../deck.js/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../deck.js/extensions/menu/deck.menu.js"></script>
+<script src="../deck.js/extensions/goto/deck.goto.js"></script>
+<script src="../deck.js/extensions/status/deck.status.js"></script>
+<script src="../deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="../deck.js/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+    $(function() {
+        $.deck('.slide');
+    });
+</script>
+</body>
+</html>
