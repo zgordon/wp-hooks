@@ -1,0 +1,98 @@
+body {
+    background: #384047;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #384047
+}
+
+h2 {
+    border-bottom-color: #384047;
+    border-bottom-width: 2px;
+}
+
+li {
+    font-size: 1.4em;
+}
+
+.definitions li {
+    font-size: 1.8em;
+
+}
+
+li .gist-it-gist {
+    font-size: 0.5em;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+p a, li a {
+    border-bottom: 2px #fff solid;
+
+}
+
+code {
+    color: #f9fafa;
+}
+
+img {
+    margin: 10px 0;
+}
+
+*::selection {
+    background: #838cc7;
+}
+
+.deck-container {
+    background: #5fcf80;
+    color: #fff;
+}
+
+#banner {
+    position: absolute;
+    bottom: 10px;
+    z-index: 100000;
+    text-align: center;
+    width: 100%;
+    font-size: .44em;
+    line-height: .8em;
+}
+
+#banner p:first-child {
+    font-size: 1.4em;
+}
+
+#banner,
+#banner a {
+    color: #5a6772;
+    border-width: 1px;
+    border-color: #5a6772;
+}
+
+/*
+    Slide styles
+*/
+
+.slide {
+    background: #5fcf80;
+}
+
+#welcome,
+#hook_functions {
+    background: #838cc7;
+}
+
+#welcome h1,
+#hook_functions h1 {
+    color: #fff;
+    /*position: relative;*/
+    /*-webkit-transform: none;*/
+    /*transform: none;*/
+}
+
+.deck-prev-link, .deck-next-link {
+    background: ;
+}
