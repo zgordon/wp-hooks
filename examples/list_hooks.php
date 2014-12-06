@@ -1,6 +1,7 @@
 <?php
 
-list_hooks();
-require_once( 'hook_debugging_functions.php' );
+    require_once( 'hook_debugging_functions.php' );
+
+    list_hooks();
 
 ?>
