@@ -1,6 +1,1 @@
-<?php 
-
-remove_filter( 'wp_title', 'wptexturize' );
-add_filter( 'wp_title', 'wptexturize', 20 );
-
-?>
+<?php remove_filter( $tag, $function_to_remove, $priority ); ?>
