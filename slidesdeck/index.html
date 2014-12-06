@@ -40,7 +40,7 @@
 
 
         <!--
-
+-->
         <section id="welcome" class="slide">
             <h1>WordPress Hooks Explained</h1>
         </section>
@@ -79,7 +79,7 @@
 
 
         <section id="wp_filters" class="slide">
-            <h2>All the Hooks in WordPress</h2>
+            <h2>Finding the Hooks</h2>
             <ul>
                 <li><strong>$wp_filter</strong> - Associative array of all hooks</li>
                 <li>Can use <code>var_export()</code> to output</li>
@@ -90,7 +90,7 @@
         </section>
 
         <section id="list_hooks" class="slide">
-            <h2>All the Hooks in WordPress</h2>
+            <h2>Hooks in WordPress</h2>
             <ul>
                 <li>Debugging hooks helper functions from <a href="http://www.rarst.net/wordpress/debug-wordpress-hooks/">Rarst</a></li>
                 <li>Outputs nicer formatted array</li>
@@ -104,7 +104,7 @@
             <p><img src="images/query-monitor.png" alt="Query Monitor"/></p>
         </section>
 
-        <section id="codex" class="slide">
+        <section id="filter_functions" class="slide">
             <h2>Hooks Reference</h2>
             <ul>
                 <li><a href="http://codex.wordpress.org/Plugin_API/Filter_Reference">The Codex Filter Reference</a></li>
@@ -113,14 +113,14 @@
             </ul>
         </section>
 
-        -->
+
 
         <section id="filter_functions" class="slide">
             <h2>Filter Functions</h2>
             <ul>
-                <li><a href="http://codex.wordpress.org/Function_Reference/add_filter">add_filter</a> - </li>
-                <li><a href="http://codex.wordpress.org/Plugin_API/Action_Reference">The Codex Action Reference</a></li>
-                <li><a href="http://adambrown.info/p/wp_hooks">Adam Brown's Hook Database</a></li>
+                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/add_filter">add_filter</a> - Let's you add a function to a filter</li>
+                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_filter">remove_filter()</a> - Let's you unhook a functions from a filter</li>
+                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_filter">has_filter()</a></li>
             </ul>
         </section>
 
@@ -172,7 +172,7 @@
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
-    $(function() {
+    $(document).ready(function(){
         $.deck('.slide');
     });
 </script>
