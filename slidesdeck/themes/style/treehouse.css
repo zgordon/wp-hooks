@@ -62,7 +62,7 @@ img {
 }
 
 #banner p:first-child {
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 #banner,
@@ -94,5 +94,5 @@ img {
 }
 
 .deck-prev-link, .deck-next-link {
-    background: ;
+
 }

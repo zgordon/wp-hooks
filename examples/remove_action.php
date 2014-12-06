@@ -1,0 +1,1 @@
+<?php remove_action( $tag, $function_to_remove, $priority ); ?>
