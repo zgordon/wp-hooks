@@ -131,22 +131,30 @@
             <li class="slide">
                 <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/add_filter.php"></script>
             </li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/add_filter_example.php"></script>
+            </li>
         </ul>
     </section>
     <section id="add_filter" class="slide">
-        <h2>Hooking Into a Filter</h2>
+        <h2>Unhooking From a Filter</h2>
         <ul>
             <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_filter">remove_filter()</a> - Let's you unhook a function from a filter</li>
             <li class="slide">
                 <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_filter.php"></script>
             </li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_filter_example.php"></script>
+            </li>
         </ul>
     </section>
 
     <section id="more_filter_functions" class="slide">
-        <h2>Filter Functions</h2>
+        <h2>Helpful Filter Functions</h2>
         <ul>
             <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_filter">has_filter()</a> - Let's you check to see if a filter exists</li>
+            <li>Can check if specific functions are hooked to a filter</li>
+            <li>Helpful if testing if plugin hooks exist</li>
             <li class="slide">
                 <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/has_filter.php"></script>
             </li>
