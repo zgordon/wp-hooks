@@ -41,8 +41,8 @@
 
         <!--
 -->
-        <section id="welcome" class="slide">
-            <h1>WordPress Hooks Explained</h1>
+        <section id="welcome" class="slide title">
+            <h1>WordPress Hooks</h1>
         </section>
 
 
@@ -79,42 +79,45 @@
 
 
         <section id="wp_filters" class="slide">
-            <h2>Finding Hooks</h2>
+            <h2>Native Hooks</h2>
             <ul>
-                <li><strong>$wp_filter</strong> - Associative array of all hooks</li>
-                <li>Can use <code>var_export()</code> to output</li>
+                <li class="slide">Codex reference for <a href="http://codex.wordpress.org/Plugin_API/Action_Reference">action</a> and <a href="http://codex.wordpress.org/Plugin_API/Filter_Reference">filters</a></li>
+                <li class="slide"><strong>$wp_filter</strong> - Associative array of all hooks</li>
+                <li class="slide">Can use <code>var_export()</code> to output</li>
+                <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/export_wp_filter.php"></script></li>
             </ul>
-
-            <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/export_wp_filter.php"></script>
-
         </section>
 
         <section id="list_hooks" class="slide">
-            <h2>Finding Hooks</h2>
+            <h2>Native Hooks</h2>
             <ul>
-                <li>Debugging hooks helper functions from <a href="http://www.rarst.net/wordpress/debug-wordpress-hooks/">Rarst</a></li>
-                <li>Outputs nicer formatted array</li>
+                <li class="slide">Debugging hooks helper functions from <a href="http://www.rarst.net/wordpress/debug-wordpress-hooks/">Rarst</a></li>
+                <li class="slide">Outputs nicer formatted array</li>
+                <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/list_hooks.php"></script></li>
             </ul>
-            <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/list_hooks.php"></script>
         </section>
 
         <section id="query_monitor" class="slide">
-            <h2>Finding Hooks</h2>
-            <p><a href="https://wordpress.org/plugins/query-monitor/">Query Monitor Plugin</a> - Gives detailed information about hooks</p>
-            <p><img src="images/query-monitor.png" alt="Query Monitor"/></p>
-        </section>
-
-        <section id="filter_functions" class="slide">
-            <h2>Finding Hooks</h2>
+            <h2>Native Hooks</h2>
             <ul>
-                <li><a href="http://codex.wordpress.org/Plugin_API/Filter_Reference">The Codex Filter Reference</a> - A list of all native filters in WordPress</li>
-                <li><a href="http://codex.wordpress.org/Plugin_API/Action_Reference">The Codex Action Reference</a> - A list of all native actions in WordPress</li>
-                <li><a href="http://adambrown.info/p/wp_hooks">Adam Brown's Hook Database</a> - A comprehensive list of hooks</li>
+                <li class="slide"><a href="https://wordpress.org/plugins/query-monitor/">Query Monitor Plugin</a> - Gives detailed information about hooks</li>
+                <li class="slide image"><img src="images/query-monitor.png" alt="Query Monitor"/></li>
             </ul>
         </section>
 
-        <section id="hook_functions" class="slide">
-            <h1>Hook Functions</h1>
+        <section id="search_core" class="slide">
+            <h2>Native Hooks</h2>
+            <ul>
+                <li class="slide">Search core to trace back hooks</li>
+                <li class="slide">See what ties into functions</li>
+                <li class="slide">See where hooks are applied</li>
+                <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/search_core.php"></script></li>
+                <li class="slide">Search with and w/out spaces</li>
+            </ul>
+        </section>
+
+        <section id="filter_functions_title" class="slide title">
+            <h1>Filter Functions</h1>
         </section>
 
         <section id="filter_functions" class="slide">
@@ -140,7 +143,7 @@
                 </li>
             </ul>
         </section>
-        <section id="more_filter_functions_2" class="slide">
+        <section id="apply_filters" class="slide">
             <h2>Filter Functions</h2>
             <ul>
                 <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/apply_filters">apply_filters()</a> - Causes a filter to execute on a value or variable</li>
@@ -149,6 +152,12 @@
                 </li>
             </ul>
         </section>
+
+
+        <section id="action_functions_title" class="slide">
+            <h1>Action Functions</h1>
+        </section>
+
 
         <section id="action_functions" class="slide">
             <h2>Action Functions</h2>
@@ -161,15 +170,19 @@
                 <li class="slide">
                     <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_action.php"></script>
                 </li>
-            </ul>
-        </section>
-
-        <section id="apply_filters" class="slide">
-            <h2>Action Functions</h2>
-            <ul>
                 <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/do_action">do_action()</a></li>
                 <li class="slide">
                     <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/do_action.php"></script>
+                </li>
+            </ul>
+        </section>
+
+        <section id="do_action_example" class="slide">
+            <h2>Action Functions</h2>
+            <ul>
+                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/do_action">do_action()</a> Example</li>
+                <li class="slide">
+                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/do_action_example.php"></script>
                 </li>
             </ul>
         </section>
@@ -184,6 +197,10 @@
             </ul>
         </section>
 
+
+        <section id="action_functions_title" class="slide title">
+            <h1>Action Functions</h1>
+        </section>
 
         <!-- End slides. -->
 

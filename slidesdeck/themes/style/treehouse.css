@@ -21,6 +21,10 @@ li {
 
 }
 
+li.image {
+    list-style-type: none;
+}
+
 li .gist-it-gist {
     font-size: 0.5em;
 }
@@ -93,13 +97,11 @@ img {
     background: #5fcf80;
 }
 
-#welcome,
-#hook_functions {
+.slide.title {
     background: #838cc7;
 }
 
-#welcome h1,
-#hook_functions h1 {
+.slide.title h1 {
     color: #fff;
     /*position: relative;*/
     /*-webkit-transform: none;*/
