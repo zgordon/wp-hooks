@@ -40,199 +40,208 @@
 
 
         <!--
--->
-        <section id="welcome" class="slide title">
-            <h1>WordPress Hooks</h1>
-        </section>
+    -->
+    <section id="welcome" class="slide title">
+        <h1>WordPress Hooks</h1>
+    </section>
 
 
-        <section id="overview" class="slide">
-            <h2>Overview</h2>
-            <ul>
-                <li>Definitions: hooks, filters, actions</li>
-                <li>$wp_filters</li>
-                <li>Looking up a Hook</li>
-                <li>Helper Functions: has_filter, has_action, current_filter</li>
-                <li>Removing Hooks</li>
-                <li>Adding Custom Code to a Native Hook</li>
-                <li>Create Your Own Hooks</li>
-            </ul>
-        </section>
+    <section id="overview" class="slide">
+        <h2>Overview</h2>
+        <ul>
+            <li>Definitions: hooks, filters, actions</li>
+            <li>$wp_filters</li>
+            <li>Looking up a Hook</li>
+            <li>Helper Functions: has_filter, has_action, current_filter</li>
+            <li>Removing Hooks</li>
+            <li>Adding Custom Code to a Native Hook</li>
+            <li>Create Your Own Hooks</li>
+        </ul>
+    </section>
 
-        <section id="definitions" class="slide">
-            <h2>Definitions</h2>
-            <ul class="definitions">
-                <li class="slide">
-                    <strong>Hooks</strong> - General term referring
-                    to places where you add code to WordPress core, a theme or a plugin.
-                </li>
-                <li class="slide">
-                    <strong>Filters</strong> - Let you to
-                    get and modify data.
-                </li>
-                <li class="slide">
-                    <strong>Actions</strong> - Allow you to
-                    run code at a specific point in the WordPress runtime.
-                </li>
-            </ul>
-        </section>
+    <section id="definitions" class="slide">
+        <h2>Definitions</h2>
+        <ul class="definitions">
+            <li class="slide">
+                <strong>Hooks</strong> - General term referring
+                to places where you add code to WordPress core, a theme or a plugin.
+            </li>
+            <li class="slide">
+                <strong>Filters</strong> - Let you to
+                get and modify data.
+            </li>
+            <li class="slide">
+                <strong>Actions</strong> - Allow you to
+                run code at a specific point in the WordPress runtime.
+            </li>
+        </ul>
+    </section>
 
+    <section id="native_hooks" class="slide title">
+        <h1>Native Hooks</h1>
+    </section>
 
-        <section id="wp_filters" class="slide">
-            <h2>Native Hooks</h2>
-            <ul>
-                <li class="slide">Codex reference for <a href="http://codex.wordpress.org/Plugin_API/Action_Reference">action</a> and <a href="http://codex.wordpress.org/Plugin_API/Filter_Reference">filters</a></li>
-                <li class="slide"><strong>$wp_filter</strong> - Associative array of all hooks</li>
-                <li class="slide">Can use <code>var_export()</code> to output</li>
-                <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/export_wp_filter.php"></script></li>
-            </ul>
-        </section>
+    <section id="wp_filters" class="slide">
+        <h2>Seeing What Hooks Are Available</h2>
+        <ul>
+            <li class="slide">Codex reference for <a href="http://codex.wordpress.org/Plugin_API/Action_Reference">action</a> and <a href="http://codex.wordpress.org/Plugin_API/Filter_Reference">filters</a></li>
+            <li class="slide"><strong>$wp_filter</strong> - Associative array of all hooks</li>
+            <li class="slide">Can use <code>var_export()</code> to output</li>
+            <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/export_wp_filter.php"></script></li>
+        </ul>
+    </section>
 
-        <section id="list_hooks" class="slide">
-            <h2>Native Hooks</h2>
-            <ul>
-                <li class="slide">Debugging hooks helper functions from <a href="http://www.rarst.net/wordpress/debug-wordpress-hooks/">Rarst</a></li>
-                <li class="slide">Outputs nicer formatted array</li>
-                <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/list_hooks.php"></script></li>
-            </ul>
-        </section>
+    <section id="list_hooks" class="slide">
+        <h2>Outputting Hooks</h2>
+        <ul>
+            <li class="slide">Debugging hooks helper functions from <a href="http://www.rarst.net/wordpress/debug-wordpress-hooks/">Rarst</a></li>
+            <li class="slide">Outputs nicer formatted array</li>
+            <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/list_hooks.php"></script></li>
+        </ul>
+    </section>
 
-        <section id="query_monitor" class="slide">
-            <h2>Native Hooks</h2>
-            <ul>
-                <li class="slide"><a href="https://wordpress.org/plugins/query-monitor/">Query Monitor Plugin</a> - Gives detailed information about hooks</li>
-                <li class="slide image"><img src="images/query-monitor.png" alt="Query Monitor"/></li>
-            </ul>
-        </section>
+    <section id="query_monitor" class="slide">
+        <h2>Helpful Plugins</h2>
+        <ul>
+            <li class="slide"><a href="https://wordpress.org/plugins/query-monitor/">Query Monitor Plugin</a> - Gives detailed information about hooks</li>
+            <li class="slide image"><img src="images/query-monitor.png" alt="Query Monitor"/></li>
+        </ul>
+    </section>
 
-        <section id="search_core" class="slide">
-            <h2>Native Hooks</h2>
-            <ul>
-                <li class="slide">Search WordPress core to trace back hooks</li>
-                <li class="slide">See what ties into functions</li>
-                <li class="slide">See where hooks are applied</li>
-                <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/search_core.php"></script></li>
-                <li class="slide">Search with and with out spaces ie add_action('</li>
-            </ul>
-        </section>
-
-        <section id="filter_functions_title" class="slide title">
-            <h1>Filter Functions</h1>
-        </section>
-
-        <section id="filter_functions" class="slide">
-            <h2>Filter Functions</h2>
-            <ul>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/add_filter">add_filter</a> - Let's you add a function to a filter</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/add_filter.php"></script>
-                </li>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_filter">remove_filter()</a> - Let's you unhook a function from a filter</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_filter.php"></script>
-                </li>
-            </ul>
-        </section>
-
-        <section id="more_filter_functions" class="slide">
-            <h2>Filter Functions</h2>
-            <ul>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_filter">has_filter()</a> - Let's you check to see if a filter exists</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/has_filter.php"></script>
-                </li>
-            </ul>
-        </section>
-        <section id="apply_filters" class="slide">
-            <h2>Filter Functions</h2>
-            <ul>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/apply_filters">apply_filters()</a> - Causes a filter to execute on a value or variable</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/apply_filters.php"></script>
-                </li>
-            </ul>
-        </section>
+    <section id="search_core" class="slide">
+        <h2>Hooks in Core</h2>
+        <ul>
+            <li class="slide">Search WordPress core to trace back hooks</li>
+            <li class="slide">See what ties into functions</li>
+            <li class="slide">See where hooks are applied</li>
+            <li class="slide"><script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/search_core.txt"></script></li>
+            <li class="slide">Search with and with out spaces ie add_action('</li>
+        </ul>
+    </section>
 
 
-        <section id="action_functions_title" class="slide">
-            <h1>Action Functions</h1>
-        </section>
+    <section id="filter_functions_title" class="slide title">
+        <h1>Working with Filters</h1>
+    </section>
+
+    <section id="add_filter" class="slide">
+        <h2>Hooking Into a Filter</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/add_filter">add_filter</a> - Let's you add a function to a filter</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/add_filter.php"></script>
+            </li>
+        </ul>
+    </section>
+    <section id="add_filter" class="slide">
+        <h2>Hooking Into a Filter</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_filter">remove_filter()</a> - Let's you unhook a function from a filter</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_filter.php"></script>
+            </li>
+        </ul>
+    </section>
+
+    <section id="more_filter_functions" class="slide">
+        <h2>Filter Functions</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_filter">has_filter()</a> - Let's you check to see if a filter exists</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/has_filter.php"></script>
+            </li>
+        </ul>
+    </section>
+    <section id="apply_filters" class="slide">
+        <h2>Filter Functions</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/apply_filters">apply_filters()</a> - Causes a filter to execute on a value or variable</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/apply_filters.php"></script>
+            </li>
+        </ul>
+    </section>
 
 
-        <section id="action_functions" class="slide">
-            <h2>Action Functions</h2>
-            <ul>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/add_action">add_action</a> - Let's you add a function to an action</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/add_action.php"></script>
-                </li>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_action">remove_action()</a> - Let's you unhook functions from an action</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_action.php"></script>
-                </li>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/do_action">do_action()</a></li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/do_action.php"></script>
-                </li>
-            </ul>
-        </section>
-
-        <section id="do_action_example" class="slide">
-            <h2>Action Functions</h2>
-            <ul>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/do_action">do_action()</a> Example</li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/do_action_example.php"></script>
-                </li>
-            </ul>
-        </section>
-
-        <section id="has_action" class="slide">
-            <h2>Action Functions</h2>
-            <ul>
-                <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_action">has_action()</a></li>
-                <li class="slide">
-                    <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/has_action.php"></script>
-                </li>
-            </ul>
-        </section>
+    <section id="action_functions_title" class="slide">
+        <h1>Action Functions</h1>
+    </section>
 
 
-        <section id="action_functions_title" class="slide title">
-            <h1>Action Functions</h1>
-        </section>
+    <section id="action_functions" class="slide">
+        <h2>Action Functions</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/add_action">add_action</a> - Let's you add a function to an action</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/add_action.php"></script>
+            </li>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_action">remove_action()</a> - Let's you unhook functions from an action</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/remove_action.php"></script>
+            </li>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/do_action">do_action()</a></li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/do_action.php"></script>
+            </li>
+        </ul>
+    </section>
 
-        <!-- End slides. -->
+    <section id="do_action_example" class="slide">
+        <h2>Action Functions</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/do_action">do_action()</a> Example</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/do_action_example.php"></script>
+            </li>
+        </ul>
+    </section>
 
-        <!-- Begin extension snippets. Add or remove as needed. -->
+    <section id="has_action" class="slide">
+        <h2>Action Functions</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_action">has_action()</a></li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/has_action.php"></script>
+            </li>
+        </ul>
+    </section>
 
-        <!-- deck.navigation snippet -->
-        <div aria-role="navigation">
-            <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-            <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-        </div>
 
-        <!-- deck.status snippet -->
-        <p class="deck-status" aria-role="status">
-            <span class="deck-status-current"></span>
-            /
-            <span class="deck-status-total"></span>
-        </p>
+    <section id="action_functions_title" class="slide title">
+        <h1>Action Functions</h1>
+    </section>
 
-        <!-- deck.goto snippet -->
-        <form action="." method="get" class="goto-form">
-            <label for="goto-slide">Go to slide:</label>
-            <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-            <datalist id="goto-datalist"></datalist>
-            <input type="submit" value="Go">
-        </form>
+    <!-- End slides. -->
 
-        <!-- End extension snippets. -->
-        <div id="banner">
+    <!-- Begin extension snippets. Add or remove as needed. -->
 
-            <p>Common and Helpful WordPress Hooks Explained - WordCamp Orlando 2014 - Zac Gordon <a href="https://twitter.com/zgordon">@zgordon</a></p>
-        </div>
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+        <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+        <a href="#" class="deck-next-link" title="Next">&#8594;</a>
     </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+        <span class="deck-status-current"></span>
+        /
+        <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+        <label for="goto-slide">Go to slide:</label>
+        <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+        <datalist id="goto-datalist"></datalist>
+        <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+    <div id="banner">
+
+        <p>Common and Helpful WordPress Hooks Explained - WordCamp Orlando 2014 - Zac Gordon <a href="https://twitter.com/zgordon">@zgordon</a></p>
+    </div>
+</div>
 
 
 <!-- Required JS files. -->
@@ -248,9 +257,9 @@
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
-    $(document).ready(function(){
-        $.deck('.slide');
-    });
+$(document).ready(function(){
+    $.deck('.slide');
+});
 </script>
 </body>
 </html>
