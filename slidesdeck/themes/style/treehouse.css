@@ -72,6 +72,19 @@ img {
     border-color: #5a6772;
 }
 
+.deck-prev-link, .deck-next-link {
+    background: transparent;
+    font-family: serif;
+    color: #384047;
+}
+.deck-prev-link, .deck-prev-link:hover, .deck-prev-link:focus, .deck-prev-link:active, .deck-prev-link:visited, .deck-next-link, .deck-next-link:hover, .deck-next-link:focus, .deck-next-link:active, .deck-next-link:visited {
+    color: #384047;
+}
+.deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
+    background: transparent;
+    text-decoration: none;
+}
+
 /*
     Slide styles
 */
@@ -91,8 +104,4 @@ img {
     /*position: relative;*/
     /*-webkit-transform: none;*/
     /*transform: none;*/
-}
-
-.deck-prev-link, .deck-next-link {
-
 }
