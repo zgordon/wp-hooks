@@ -120,7 +120,7 @@
     </section>
 
 
-    <section id="filter_functions_title" class="slide title">
+    <section id="working_with_filters" class="slide title">
         <h1>Working with Filters</h1>
     </section>
 
@@ -136,7 +136,7 @@
             </li>
         </ul>
     </section>
-    <section id="add_filter" class="slide">
+    <section id="remove_filter" class="slide">
         <h2>Unhooking From a Filter</h2>
         <ul>
             <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/remove_filter">remove_filter()</a> - Let's you unhook a function from a filter</li>
@@ -149,17 +149,27 @@
         </ul>
     </section>
 
-    <section id="more_filter_functions" class="slide">
+    <section id="has_filter" class="slide">
         <h2>Helpful Filter Functions</h2>
         <ul>
             <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/has_filter">has_filter()</a> - Let's you check to see if a filter exists</li>
-            <li>Can check if specific functions are hooked to a filter</li>
-            <li>Helpful if testing if plugin hooks exist</li>
+            <li class="slide">Can check if specific functions are hooked to a filter</li>
+            <li class="slide">Helpful if testing if plugin hooks exist</li>
             <li class="slide">
                 <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/has_filter.php"></script>
             </li>
         </ul>
     </section>
+    <section id="is_main_query" class="slide">
+        <h2>Helpful Filter Functions</h2>
+        <ul>
+            <li class="slide"><a href="http://codex.wordpress.org/Function_Reference/is_main_query">is_main_query()</a> - Checks if you're in the main loop</li>
+            <li class="slide">Won't run in custom WP_Query calls</li>
+            <li class="slide">
+                <script src="http://gist-it.appspot.com/github/zgordon/wp-hooks/blob/master/examples/is_main_query.php"></script>
+            </li>
+        </ul>
+    </section>    
     <section id="apply_filters" class="slide">
         <h2>Filter Functions</h2>
         <ul>

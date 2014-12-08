@@ -6,8 +6,8 @@ if ( has_filter( 'custom_plugin_filter' ) ) {
 }
 
 // Check if function is hooked into filter then replace it
-if ( has_filter( 'the_content', 'custom_plugin_code' ) ) {
-	remove_filter( 'the_content', 'custom_plugin_code' );
+if ( has_filter( 'the_content', 'custom_plugin_function' ) ) {
+	remove_filter( 'the_content', 'custom_plugin_function' );
 	add_filter( 'the_content', 'my_content_code' );
 }
 
